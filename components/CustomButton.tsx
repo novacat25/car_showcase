@@ -1,8 +1,17 @@
+"use client"
+
 import React from 'react'
 
 const CustomButton = () => {
   return (
-    <div>CustomButton</div>
+    <button
+        disabled={false}
+        type={'button'}
+        className={`custom-btn`}
+        onClick={()=>{console.log('hello')}}
+    >
+        CustomButton
+    </button>
   )
 }
 
