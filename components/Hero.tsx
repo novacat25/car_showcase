@@ -4,7 +4,7 @@ import React from 'react'
 import CustomButton from './CustomButton'
 
 const Hero = () => {
-  const handleScroll = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const hanleCheckEvent = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     console.log(e)
   }
 
@@ -24,7 +24,7 @@ const Hero = () => {
           title="Explore Cars"
           containerStyles="bg-primary-blue
           text-white rounded-full mt-10"
-          handleClick={handleScroll}
+          handleClick={hanleCheckEvent}
         />
       </div>
     </div>
