@@ -5,7 +5,9 @@ import CustomButton from './CustomButton'
 
 const Hero = () => {
   const hanleCheckEvent = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    console.log(e)
+    console.log("event:",e)
+    console.log("event.currentTarget:", e.currentTarget)
+    console.log("event.Target:",e.target)
   }
 
   return (
