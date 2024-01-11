@@ -10,7 +10,9 @@ const CustomButton = () => {
         className={`custom-btn`}
         onClick={()=>{console.log('hello')}}
     >
+      <span className={`flex-1`}>
         CustomButton
+      </span>
     </button>
   )
 }
