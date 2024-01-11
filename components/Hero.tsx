@@ -4,8 +4,8 @@ import React from 'react'
 import CustomButton from './CustomButton'
 
 const Hero = () => {
-  const handleScroll = () => {
-    console.log("hello bro")
+  const handleScroll = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    console.log(e)
   }
 
   return (
