@@ -34,7 +34,7 @@ const Hero = () => {
             src="/hero.png" 
             alt="hero"
             fill
-            sizes="100vh"
+            sizes="100vw"
             priority
             className="object-contain"
           />
