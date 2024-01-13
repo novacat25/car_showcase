@@ -20,6 +20,10 @@ const Footer = () => {
                     All rights reserved &copy;
                 </p>
             </div>
+
+            <div className="footer__links">
+              Footer links
+            </div>
         </div>
     </footer>
   )
