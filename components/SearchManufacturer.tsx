@@ -61,7 +61,25 @@ const SearchManufacturer = ({ manufacturer,
                     }
                       value={item}
                     >
-                      {item}
+                    {({ selected, active }) => (
+                      <>
+                        <span
+                          className={`block truncate ${
+                            selected ? 'font-medium' : 'font-normal'
+                          }`}
+                        >
+                          {item}
+                        </span>
+                        {selected ? (
+                          <span
+                            className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
+                              active ? 'text-white' : 'text-teal-600'
+                            }`}
+                          >
+                          </span>
+                        ) : null}
+                      </>
+                    )}
                     </Combobox.Option>
                   )
                 )}
