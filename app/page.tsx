@@ -14,6 +14,16 @@ export default function Home() {
           </h1>
           <p>Explore the cars you might like</p>
         </div>
+
+        <div className="home__filters">
+          SearchBar
+
+          <div 
+          className="home__filter-container">
+            CustomFilter 1
+            CustomFilter 2
+          </div>
+        </div>
       </div>
     </main>
   )
