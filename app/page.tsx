@@ -1,4 +1,4 @@
-import { CustomFilter, Hero, SearchBar } from "@/components"
+import { CarCard, CustomFilter, Hero, SearchBar } from "@/components"
 import { fetchCars } from "@/utils"
 import { Fragment } from "react"
 
@@ -37,7 +37,7 @@ export default async function Home() {
             <div className="home__cars-wrapper">
               {allCars?.map((car)=> (
               <Fragment key={car}>
-                <div>{car.model}</div>
+                <CarCard car={car} />
               </Fragment>
               ))}
             </div>
