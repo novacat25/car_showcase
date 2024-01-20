@@ -53,6 +53,10 @@ const CarCard = ({ car }: CarCardProps) => {
               width={20}
               height={20}
               alt="steering wheel"
+              style={{
+                width: 20,
+                height: 20
+              }}
             />
             <p className="text-[14px]">
               {transmission === "a" ? "Automatic" : "Manual"}
@@ -64,6 +68,10 @@ const CarCard = ({ car }: CarCardProps) => {
               width={20}
               height={20}
               alt="tire"
+              style={{
+                width: 20,
+                height: 20
+              }}
             />
             <p className="text-[14px]">
               {drive.toUpperCase()}
@@ -75,6 +83,10 @@ const CarCard = ({ car }: CarCardProps) => {
               width={20}
               height={20}
               alt="seat"
+              style={{
+                width: 20,
+                height: 20
+              }}
             />
             <p className="text-[14px]">
               {city_mpg} MPG
