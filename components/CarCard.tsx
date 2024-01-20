@@ -1,8 +1,29 @@
+import { CarProps } from '@/types'
 import React from 'react'
 
-const CarCard = () => {
+interface CarCardProps {
+  car: CarProps
+}
+
+const CarCard = ({ car }: CarCardProps) => {
+  //const { city_mpg, year, make, model, transmission, drive } = car
+  //delete the above code when necessary, remove this comment
+  const { make, model } = car
+
   return (
-    <div>CarCard</div>
+    <div className="car-card group">
+      <div className="car-card__content">
+        <h2 className="car-card__content-title">
+          {make} {model}
+        </h2>
+      </div>
+
+      <p>
+        <span>
+          Car Rent...
+        </span>
+      </p>
+    </div>
   )
 }
 
