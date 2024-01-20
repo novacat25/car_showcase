@@ -2,6 +2,7 @@ import { CarProps } from '@/types'
 import { calculateCarRent } from '@/utils'
 import Image from 'next/image'
 import React from 'react'
+import CustomButton from './CustomButton'
 
 interface CarCardProps {
   car: CarProps
@@ -92,6 +93,10 @@ const CarCard = ({ car }: CarCardProps) => {
               {city_mpg} MPG
             </p>
           </div>
+        </div>
+
+        <div className="car-card__btn-container">
+          <CustomButton title="View More" containerStyles="w-full py-[16px] rounded-full bg-primary-blue" />
         </div>
       </div>
     </div>
