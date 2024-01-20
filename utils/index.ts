@@ -1,9 +1,13 @@
 export const fetchCars = async () => {
+    const rapidAPIKey = String(process.env.X_RAPID_API_KEY)
+    const rapidAPIHost = String(process.env.X_RAPID_API_HOST)
+
     const headers = new Headers()
-    headers.append('X-RapidAPI-Key',String(process.env.X_RAPID_API_KEY))
-    headers.append('X-RapidAPI-Host',String(process.env.X_RAPID_API_HOST))
+
+    headers.append('X-RapidAPI-Key',rapidAPIKey)
+    headers.append('X-RapidAPI-Host',rapidAPIHost)
     
-    const response = await fetch('https://cars-by-api-ninjas.p.rapidapi.com/v1/cars', {
+    const response = await fetch('https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla', {
         headers: headers,
     })
 
