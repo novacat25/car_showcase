@@ -6,8 +6,7 @@ import { manufacturers } from '@/constants'
 import { SearchManufacturerProps } from '@/types'
 import React, { Fragment, useState } from 'react'
 
-const SearchManufacturer = ({ manufacturer,
-  setManufacturer }:SearchManufacturerProps) => {
+const SearchManufacturer = ({ manufacturer, setManufacturer }:SearchManufacturerProps) => {
     const [query,setQuery] = useState('')
 
     const filteredManufacturers = 
@@ -23,8 +22,7 @@ const SearchManufacturer = ({ manufacturer,
       <div className="search-manufacturer">
         <Combobox value={manufacturer} onChange={setManufacturer}>
           <div className="relative w-full">
-            <Combobox.Button className="absolute top-
-            [14px]">
+            <Combobox.Button className="absolute top-[14px]">
               <Image
                 src="/car-logo.svg"
                 width={20}
@@ -42,7 +40,6 @@ const SearchManufacturer = ({ manufacturer,
               }
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)}
             />
-
             <Transition
               as={Fragment}
               leave="transition ease-in duration-100"
@@ -54,19 +51,16 @@ const SearchManufacturer = ({ manufacturer,
                 {filteredManufacturers.map((item: string) => (
                     <Combobox.Option
                       key={item}
-                      className={({ active }): string => 
-                      `relative search-manufacturer__option ${
-                        active ? "bg-primary-blue text-white" : "text-gray-900"
-                      }`
+                      className={
+                        ({ active }): string => 
+                      `relative search-manufacturer__option ${active ? "bg-primary-blue text-white" : "text-gray-900"}`
                     }
                       value={item}
                     >
                     {({ selected, active }) => (
                       <>
                         <span
-                          className={`block truncate ${
-                            selected ? 'font-medium' : 'font-normal'
-                          }`}
+                          className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}
                         >
                           {item}
                         </span>
