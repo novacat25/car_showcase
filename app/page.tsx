@@ -33,7 +33,9 @@ export default async function Home() {
 
         {!isDataEmpty ? (
           <section>
-            WE HAVE CARS
+            <div className="home__cars-wrapper">
+              {allCars?.map((car)=> (<div>{car.model}</div>))}
+            </div>
           </section>
         ) :(
         <div className="home__error-container">
