@@ -1,4 +1,5 @@
 import { CarProps } from '@/types'
+import { calculateCarRent } from '@/utils'
 import React from 'react'
 
 interface CarCardProps {
@@ -6,9 +7,11 @@ interface CarCardProps {
 }
 
 const CarCard = ({ car }: CarCardProps) => {
-  //const { city_mpg, year, make, model, transmission, drive } = car
+  // const { city_mpg, year, make, model, transmission, drive } = car
   //delete the above code when necessary, remove this comment
-  const { make, model } = car
+  const { city_mpg, year, make, model } = car
+
+  const carRent = calculateCarRent(city_mpg, year)
 
   return (
     <div className="car-card group">
@@ -20,7 +23,7 @@ const CarCard = ({ car }: CarCardProps) => {
 
       <p>
         <span>
-          Car Rent...
+          {carRent}
         </span>
       </p>
     </div>
