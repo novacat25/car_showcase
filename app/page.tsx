@@ -3,7 +3,7 @@ import { fetchCars } from "@/utils"
 
 export default async function Home() {
   const allCars = await fetchCars()
-  console.log(allCars)
+  const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars
 
   return (
     <main className="overflow-hidden">
@@ -30,6 +30,16 @@ export default async function Home() {
             <CustomFilter />       
           </div>
         </div>
+
+        {!isDataEmpty ? (
+          <section>
+            WE HAVE CARS
+          </section>
+        ) :(
+        <div>
+          <h2>Oops, no results</h2>
+        </div>
+        )}
       </div>
     </main>
   )
