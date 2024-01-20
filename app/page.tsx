@@ -1,5 +1,6 @@
 import { CustomFilter, Hero, SearchBar } from "@/components"
 import { fetchCars } from "@/utils"
+import { Fragment } from "react"
 
 export default async function Home() {
   const allCars = await fetchCars()
@@ -34,7 +35,11 @@ export default async function Home() {
         {!isDataEmpty ? (
           <section>
             <div className="home__cars-wrapper">
-              {allCars?.map((car)=> (<div>{car.model}</div>))}
+              {allCars?.map((car)=> (
+              <Fragment key={car}>
+                <div>{car.model}</div>
+              </Fragment>
+              ))}
             </div>
           </section>
         ) :(
