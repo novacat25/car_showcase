@@ -49,7 +49,7 @@ const CarDetails = ({ isOpen, closeModal, car}: CarDetailsProps) => {
                                         alt="close"
                                         width={20}
                                         height={20}
-                                        className='="object-contain'
+                                        className="object-contain"
                                         style={{
                                             width: 20,
                                             height: 20,
