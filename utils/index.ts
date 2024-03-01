@@ -1,3 +1,5 @@
+import { CarProps } from "@/types"
+
 export const fetchCars = async () => {
     const rapidAPIKey = String(process.env.X_RAPID_API_KEY)
     const rapidAPIHost = String(process.env.X_RAPID_API_HOST)
@@ -29,4 +31,20 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
     const rentalRatePerDay = basePricePerDay + mileageRate + ageRate
   
     return rentalRatePerDay.toFixed(0)
-  };
+}
+
+export const generateCarImageUrl = (car: CarProps, angle?: string) => {
+    const url = new URL('https://cdn.imagin.studio/getimage')
+    const KEY = String(process.env.CAR_IMAGE_API_KEY)
+
+    const { make, year, model } = car
+
+    url.searchParams.append('customer',KEY)
+    url.searchParams.append('make',make)
+    url.searchParams.append('modelFamily',model.split(' ')[0])
+    url.searchParams.append('zoomType','fullscreen')
+    url.searchParams.append('modelYear',`${year}`)
+    url.searchParams.append('angle',`${angle}`)
+
+    return `${url}`
+}
