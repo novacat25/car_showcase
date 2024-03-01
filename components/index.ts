@@ -1,4 +1,6 @@
 import Hero from "./Hero"
+import CarCard from "./CarCard"
+import CarDetails from "./CarDetails"
 import CustomButton from "./CustomButton"
 import CustomFilter from "./CustomFilter"
 import NavBar from "./NavBar"
@@ -8,6 +10,8 @@ import SearchManufacturer from "./SearchManufacturer"
 
 export {
     Hero,
+    CarCard,
+    CarDetails,
     CustomButton,
     CustomFilter,
     NavBar,
