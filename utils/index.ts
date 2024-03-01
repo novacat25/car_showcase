@@ -9,7 +9,7 @@ export const fetchCars = async () => {
     headers.append('X-RapidAPI-Key',rapidAPIKey)
     headers.append('X-RapidAPI-Host',rapidAPIHost)
     
-    const response = await fetch('https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla', {
+    const response = await fetch('https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=q3', {
         headers: headers,
     })
 
