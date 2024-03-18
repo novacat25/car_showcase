@@ -29,7 +29,7 @@ const SearchBar = () => {
     }
 
     updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase())
-  };
+  }
 
   const updateSearchParams = (model: string, manufacturer: string) => {
     const searchParams = new URLSearchParams(window.location.search)
