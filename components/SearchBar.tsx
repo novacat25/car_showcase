@@ -23,7 +23,7 @@ const SearchBar = () => {
   const router = useRouter()
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
     if (manufacturer === "" && model === "") {
       return alert("Please fill in the search bar")
     }
