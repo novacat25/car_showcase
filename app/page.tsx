@@ -49,7 +49,7 @@ export default async function Home({ searchParams }: HomeProps) {
               ))}
             </div>
 
-            <ShowMore />
+            <ShowMore pageNumber={0} isNext={false} />
           </section>
         ) :(
         <div className="home__error-container">
