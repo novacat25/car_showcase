@@ -7,15 +7,17 @@ import NavBar from "./NavBar"
 import Footer from "./Footer"
 import SearchBar from "./SearchBar"
 import SearchManufacturer from "./SearchManufacturer"
+import ShowMore from "./ShowMore"
 
 export {
-    Hero,
-    CarCard,
-    CarDetails,
-    CustomButton,
-    CustomFilter,
-    NavBar,
-    Footer,
-    SearchBar,
-    SearchManufacturer,
+  Hero,
+  CarCard,
+  CarDetails,
+  CustomButton,
+  CustomFilter,
+  NavBar,
+  Footer,
+  SearchBar,
+  SearchManufacturer,
+  ShowMore,
 }
