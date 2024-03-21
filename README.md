@@ -1,5 +1,6 @@
 # Description
-A project about Car Showcase from JavaScript Mastery(https://www.youtube.com/watch?v=pUNSHPyVryU&ab_channel=JavaScriptMastery)
+A project about Car Showcase from JavaScript Mastery
+(https://www.youtube.com/watch?v=pUNSHPyVryU&ab_channel=JavaScriptMastery)
 
 # Languages & Tools
 - TypeScript
