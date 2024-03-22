@@ -5,9 +5,10 @@ import { fuels, yearsOfProduction } from "@/constants"
 import { fetchCars } from "@/utils"
 import { Fragment, useEffect, useState } from "react"
 import Image from "next/image"
+import { CarProps } from "@/types"
 
 export default function Home() {
-  const [allCars, setAllCars] = useState([])
+  const [allCars, setAllCars] = useState<CarProps[]>([])
   const [loading, setLoading] = useState<boolean>(false)
 
   //Search states
@@ -67,8 +68,8 @@ export default function Home() {
         {allCars.length > 0 ? (
           <section>
             <div className="home__cars-wrapper">
-              {allCars?.map((car,index) => (
-                <Fragment key={index}>
+              {allCars?.map((car) => (
+                <Fragment key={car.id}>
                   <CarCard car={car} />
                 </Fragment>
               ))}
