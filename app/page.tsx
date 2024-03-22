@@ -67,8 +67,8 @@ export default function Home() {
         {allCars.length > 0 ? (
           <section>
             <div className="home__cars-wrapper">
-              {allCars?.map((car) => (
-                <Fragment key={car}>
+              {allCars?.map((car,index) => (
+                <Fragment key={index}>
                   <CarCard car={car} />
                 </Fragment>
               ))}
