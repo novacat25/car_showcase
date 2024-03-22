@@ -1,4 +1,5 @@
 import { CarProps, FilterProps } from "@/types"
+import { v4 as uuidv4 } from 'uuid'
 
 export const fetchCars = async (filters: FilterProps) => {
     const { manufacturer, year, model, limit, fuel } = filters
@@ -14,7 +15,12 @@ export const fetchCars = async (filters: FilterProps) => {
 
     const result = await response.json()
 
-    return result
+    const resultWithUUID = result.map((item: any) => ({
+        ...item,
+        id: uuidv4()
+    }))
+
+    return resultWithUUID
 }
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
