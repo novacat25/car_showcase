@@ -83,6 +83,10 @@ export default function Home() {
                   height={50}
                   className="object-contain"
                   unoptimized
+                  style={{
+                    width: '50px',
+                    height: '50px'
+                  }}
                 />
               </div>
             }
