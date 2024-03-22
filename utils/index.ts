@@ -13,9 +13,9 @@ export const fetchCars = async (filters: FilterProps) => {
         headers: headers,
     })
 
-    const result = await response.json()
+    const result: CarProps[] = await response.json()
 
-    const resultWithUUID = result.map((item: any) => ({
+    const resultWithUUID = result.map((item) => ({
         ...item,
         id: uuidv4()
     }))
