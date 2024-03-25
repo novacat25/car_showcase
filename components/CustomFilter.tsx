@@ -38,6 +38,7 @@ const CustomFilter = ({ title, options, setFilter }: CustomFilterProps) => {
             <Listbox.Options className="custom-filter__options">
               {options.map((option) => (
                 <Listbox.Option
+                  defaultValue={title}
                   key={option.title}
                   value={option}
                   className={({ active }) =>
