@@ -29,7 +29,7 @@ export default function Home() {
       const result = await fetchCars({
         manufacturer: manufacturer || "",
         year: typeof year === "number" ? year : parseInt(year) || 2022,
-        fuel: typeof fuel === "number" ? fuel.toString() : fuel || "",
+        fuel: (typeof fuel === "number" ? fuel.toString() : (fuel != null ? fuel.toString() : "")),
         limit: limit || 10,
         model: model || "",
       })
